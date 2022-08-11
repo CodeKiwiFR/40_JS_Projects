@@ -1,5 +1,7 @@
 /* VARIABLE DEFINITIONS */
 :root {
+    --green: green;
+    --red: red;
     --clr-grey-1: hsl(209, 61%, 16%);
     --clr-grey-10: hsl(210, 36%, 96%);
     --ff-primary: 'Roboto', sans-serif;
@@ -82,4 +84,10 @@ ul {
 .mainCounter__number {
     font-size: 6rem;
     margin: 1rem 0;
+}
+#counter.green {
+    color: var(--green);
+}
+#counter.red {
+    color: var(--red);
 }
