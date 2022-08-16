@@ -113,7 +113,7 @@ ul {
 }
 
 .mainSection {
-    max-width: 38.75rem;
+    max-width: 33.75rem;
     max-height: 26rem;
     display: flex;
     align-items: center;
@@ -125,6 +125,12 @@ ul {
     border-radius: var(--radius);
 }
 .mainSection__picture {
+    width: 9.375rem;
+    height: 9.375rem;
+    position: relative;
+    margin: 0.5rem 0;
+}
+.mainSection__picture__image {
     background-image: url(./src/person-1_rfzshl.jpg);
     background-position: center center;
     width: 9.375rem;
@@ -134,18 +140,78 @@ ul {
     justify-content: center;
     border-radius: 50%;
     position: relative;
+    position: absolute;
+    z-index: 1;
 }
-/* .mainSection__picture:before {
-    content: '\f10e';
-    background-color: var(--clr-primary-5);
-} */
 .mainSection__picture:before {
+    content: '"';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary-5);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: var(--clr-white);
+    position: absolute;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.mainSection__picture:after {
     content: '';
     background-color: var(--clr-primary-5);
     width: 9.375rem;
     height: 9.375rem;
     border-radius: 50%;
     position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
+    top: -0.375rem;
+    right: -0.375rem;
+}
+.mainSection__name {
+    letter-spacing: var(--letterSpacing);
+    color: var(--clr-black);
+    font-size: 1rem;
+    font-family: var(--ff-secondary);
+    margin: 0.125rem 0;
+}
+.mainSection__job {
+    color: var(--clr-primary-5);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-family: var(--ff-primary);
+    font-weight: lighter;
+    margin: 0.25rem 0;
+}
+.mainSection__description {
+    text-align: center;
+    color: var(--clr-grey-5);
+    font-size: 1rem;
+    font-family: var(--ff-secondary);
+    margin: 0.5rem 0;
+}
+.mainSection__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem;
+}
+.mainSection__controls > button {
+    cursor: pointer;
+    border: none;
+    color: var(--clr-primary-5);
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+.mainSection__randomButton {
+    cursor: pointer;
+    margin: 0.5rem 0;
+    border: 0.125rem solid var(--clr-primary-5);
+    color: var(--clr-primary-5);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    background-color: var(--clr-grey-10);
+    font-size: 0.75rem;
 }
