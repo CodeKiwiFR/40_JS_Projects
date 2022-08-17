@@ -1,11 +1,15 @@
-/* DECLARING VARIABLES */
+/* ************************************************** */
+/* Variable definitions */
+/* ************************************************** */
 const decreaseButtonElement = document.getElementById('decreaseButton');
 const resetButtonElement = document.getElementById('resetButton');
 const increaseButtonElement = document.getElementById('increaseButton');
 const counterElement = document.getElementById('counter');
 let counter = parseInt(counterElement.textContent);
 
-/* DECLARING FUNCTIONS */
+/* ************************************************** */
+/* Function definitions */
+/* ************************************************** */
 const updateCounter = (value, reset = false) => {
     if (reset) {
         counter = 0;
@@ -40,7 +44,9 @@ const increaseButtonHandler = (event) => {
     updateCounter(1);
 };
 
-/* MAIN PROGRAM */
+/* ************************************************** */
+/* Main program */
+/* ************************************************** */
 decreaseButtonElement.addEventListener('click', decreaseButtonHandler);
 resetButtonElement.addEventListener('click', resetButtonHandler);
 increaseButtonElement.addEventListener('click', increaseButtonHandler);
