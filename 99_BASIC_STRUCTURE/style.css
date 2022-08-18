@@ -65,6 +65,11 @@
   src: url('./../fonts/OpenSans-Bold.ttf');
   font-weight: bold;
 }
+@font-face {
+  font-family: 'Alumni';
+  src: url('./../fonts/AlumniSansInlineOne-Regular.ttf');
+  font-weight: normal;
+}
 
 /* STYLE DEFINITIONS */
 * {
