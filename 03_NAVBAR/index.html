@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="./../assets/fontawesome/css/all.min.css" rel="stylesheet" />
-    <script src="./script.js" defer></script>
-    <title>Navbar</title>
-  </head>
-  <body>
-    <nav class="navigation">
-      <a class="navigation__logo" href="#">Kiwi <span class="lightBlueText">Addict</span></a>
-      <ul class="navigation__menu">
-        <li class="navigation__menu__item">Home</li>
-        <li class="navigation__menu__item">About</li>
-        <li class="navigation__menu__item">Projects</li>
-        <li class="navigation__menu__item">Contact</li>
-      </ul>
-      <ul class="navigation__links">
-        <li class="navigation__links__item">
-          <a href="#"><span class="fa-brands fa-facebook"></span></a>
-        </li>
-        <li class="navigation__links__item">
-          <a href="#"><span class="fa-brands fa-square-twitter"></span></a>
-        </li>
-        <li class="navigation__links__item">
-          <a href="#"><span class="fa-brands fa-linkedin"></span></a>
-        </li>
-        <li class="navigation__links__item">
-          <span class="navigation__links__mobileButton fa-solid fa-bars"></span>
-        </li>
-      </ul>
-    </nav>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="./../assets/fontawesome/css/all.min.css" rel="stylesheet" />
+        <script src="./script.js" defer></script>
+        <title>Navbar</title>
+    </head>
+    <body>
+        <div class="modal"></div>
+        <nav class="navigation">
+            <a class="navigation__logo" href="#">Kiwi <span class="lightBlueText">Addict</span></a>
+            <div class="navigation__menuContainer">
+                <ul class="navigation__menuContainer__menu">
+                    <li class="navigation__menuContainer__menu__item"><a href="#">Home</a></li>
+                    <li class="navigation__menuContainer__menu__item"><a href="#">About</a></li>
+                    <li class="navigation__menuContainer__menu__item"><a href="#">Projects</a></li>
+                    <li class="navigation__menuContainer__menu__item"><a href="#">Contact</a></li>
+                </ul>
+                <ul class="navigation__menuContainer__links">
+                    <li class="navigation__menuContainer__links__item">
+                        <a href="#"><span class="fa-brands fa-facebook"></span></a>
+                    </li>
+                    <li class="navigation__menuContainer__links__item">
+                        <a href="#"><span class="fa-brands fa-square-twitter"></span></a>
+                    </li>
+                    <li class="navigation__menuContainer__links__item">
+                        <a href="#"><span class="fa-brands fa-linkedin"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navigation__mobileButton fa-solid fa-bars"></span>
+        </nav>
+    </body>
 </html>
