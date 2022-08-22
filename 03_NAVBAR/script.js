@@ -12,15 +12,15 @@ const elementsToToggle = [mobileButtonElement, backdropElement, menuContainerEle
 /* ************************************************** */
 const mobileButtonHandler = (event) => {
     for (const element of elementsToToggle) {
-        element.classList.toggle('OpenedMenu');
+        element.classList.toggle('openedMenu');
     }
 };
 
 const backdropHandler = (event) => {
     for (const element of elementsToToggle) {
-        element.classList.remove('OpenedMenu');
+        element.classList.remove('openedMenu');
     }
-}
+};
 
 /* ************************************************** */
 /* Main program */
