@@ -87,13 +87,13 @@ ul {
 .lightBlueText {
     color: var(--clr-primary-5);
 }
-.modal {
+.backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* WIDE SCREENS (desktop style) */
 @media screen and (min-width: 64rem) {
-    .modal {
+    .backdrop {
         display: none;
     }
     .navigation {
@@ -158,12 +158,16 @@ ul {
 
 /* MOBILE DEVICES */
 @media screen and (max-width: 63.9375rem) {
-    .modal {
+    .backdrop {
+        display: none;
         position: absolute;
         top: 4.5rem;
         left: 0;
         width: 100%;
         height: calc(100% - 4.5rem);
+    }
+    .backdrop.OpenedMenu {
+        display: block;
     }
     .navigation {
         width: 100%;
@@ -198,6 +202,12 @@ ul {
         left: 0;
         z-index: 1;
         background-color: var(--clr-white);
+        transition: transform 0.3s;
+        transform: translateX(-100%);
+    }
+    .navigation__menuContainer.OpenedMenu {
+        
+        transform: translateX(0);
     }
     .navigation__menuContainer__menu__item {
         height: 3.5rem;
@@ -221,17 +231,16 @@ ul {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0.75rem;
-        width: calc(100% - 0.75rem);
+        left: 0;
+        width: calc(100%);
         height: 0.0625rem;
-        background-color: var(--clr-grey-1);
-        transition: var(--transitionTime);
+        background-color: var(--clr-grey-8);
     }
     .navigation__menuContainer__links {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3rem;
+        height: 5rem;
     }
     .navigation__menuContainer__links__item {
         font-size: 1.75rem;
