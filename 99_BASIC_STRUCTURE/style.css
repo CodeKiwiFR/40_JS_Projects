@@ -32,6 +32,8 @@
     --radius: 0.5rem;
     --transitionTime: 0.3s linear;
     --btnShadow: 0 0.0625rem 0.1875rem rgb(0 0 0 / 20%);
+    --light-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 /* FONT MANAGEMENT */
