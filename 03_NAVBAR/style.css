@@ -193,10 +193,13 @@ ul {
         left: 0;
         z-index: 1;
         background-color: var(--clr-white);
-        transition: transform 0.3s;
+        visibility: hidden;
+        transition: visibility 0.3s;
         transform: translateX(-100%);
     }
     .navigation__menuContainer.openedMenu {
+        visibility: visible;
+        transition: transform 0.3s;
         transform: translateX(0);
     }
     .navigation__menuContainer__menu__item {

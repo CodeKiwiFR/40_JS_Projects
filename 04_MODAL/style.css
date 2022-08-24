@@ -130,6 +130,7 @@ ul {
     font-family: var(--ff-primary);
     font-size: 0.875rem;
     font-weight: bold;
+    letter-spacing: var(--letterSpacing);
     text-transform: uppercase;
     color: var(--clr-white);
     background-color: var(--clr-primary-5);
