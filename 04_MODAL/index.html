@@ -11,10 +11,22 @@
     </head>
 
     <body>
+        <div id="backdrop" class="backdrop"></div>
+        <div id="personCard" class="personCard">
+            <span id="personCardLoader" class="personCard__loader fas fa-cog fa-spin"></span>
+            <span class="personCard__close fa-solid fa-xmark"></span>
+            <div class="personCard__details">
+                <img class="personCard__details__avatar" src="https://robohash.org/eadeserunteaque.png?size=300x300&set=set1" alt="Picture of the user" />
+                <h2 class="personCard__details__name">Octavio Lehner</h2>
+                <span class="personCard__details__email">octavio.lehner@email.com</span>
+                <span class="personCard__details__job">Investor Legal Assistant</span>
+                <span class="personCard__details__phoneNumber">+960 1-664-688-6711 x90324</span>
+            </div>
+        </div>
         <main class="mainContent">
             <div class="mainContent__controlSection">
                 <h1 class="mainContent__controlSection__title">Modal project</h1>
-                <button class="mainContent__controlSection__button">Random user</button>
+                <button id="randomButton" class="mainContent__controlSection__button">Random user</button>
             </div>
         </main>
     </body>

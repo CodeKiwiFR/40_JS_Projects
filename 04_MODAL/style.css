@@ -33,7 +33,7 @@
     --transitionTime: 0.3s linear;
     --btnShadow: 0 0.0625rem 0.1875rem rgb(0 0 0 / 20%);
     --light-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
-    --dark-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+    --dark-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5);
     --txt-shadow: 0.1875rem 0.1875rem 0.125rem #bdbdbd;
 }
 
@@ -92,6 +92,77 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+/* Backdrop */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Person card */
+.personCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 40rem;
+    min-height: 18rem;
+    background-color: var(--clr-white);
+    box-shadow: var(--dark-shadow);
+    border-radius: var(--radius);
+    padding: 1rem 2rem;
+}
+.personCard__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.personCard__details__avatar {
+    height: 9.375rem;
+    width: auto;
+    border: 0.25rem solid var(--clr-primary-5);
+    border-radius: 50%;
+    box-shadow: var(--light-shadow);
+}
+.personCard__details__name {
+    font-family: var(--ff-primary);
+    font-weight: lighter;
+    letter-spacing: var(--letterSpacing);
+    font-size: 1.75rem;
+    color: var(--clr-primary-2);
+    margin: 1rem 0;
+}
+
+/* PersonCard loader and close cross */
+.personCard__loader {
+    font-size: 4rem;
+    color: var(--clr-primary-5);
+}
+#personCardLoader {
+    display: none;
+}
+.personCard__close {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr-red-dark);
+    transition: var(--transitionTime);
+}
+.personCard__close:hover {
+    transform: rotate(90deg);
 }
 
 /* Main section */
