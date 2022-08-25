@@ -97,6 +97,7 @@ ul {
 
 /* Backdrop */
 .backdrop {
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -104,9 +105,13 @@ ul {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
 }
+.backdrop.modalOpened {
+    visibility: visible;
+}
 
 /* Person card */
 .personCard {
+    visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -115,21 +120,28 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 40rem;
-    min-height: 18rem;
+    min-width: 45rem;
+    min-height: 26.25rem;
     background-color: var(--clr-white);
     box-shadow: var(--dark-shadow);
     border-radius: var(--radius);
     padding: 1rem 2rem;
 }
+.personCard.modalOpened {
+    visibility: visible;
+}
 .personCard__details {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.personCard__details.loadedUser {
+    display: flex;
+}
 .personCard__details__avatar {
     height: 9.375rem;
+    min-width: 9.375rem;
     width: auto;
     border: 0.25rem solid var(--clr-primary-5);
     border-radius: 50%;
@@ -158,9 +170,7 @@ ul {
 .personCard__details__picto:not(:last-child) {
     margin-right: 1rem;
 }
-.personCard__details__email__text,
-.personCard__details__job__text,
-.personCard__details__phoneNumber__text {
+.personCard__details__text {
     font-family: var(--ff-primary);
     font-size: 0.875rem;
     letter-spacing: var(--shortLetterSpacing);
@@ -171,7 +181,7 @@ ul {
     font-size: 4rem;
     color: var(--clr-primary-5);
 }
-#personCardLoader {
+.personCard__loader.loadedUser {
     display: none;
 }
 .personCard__close {
@@ -182,6 +192,9 @@ ul {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--clr-red-dark);
+    transition: none;
+}
+.personCard.modalOpened .personCard__close {
     transition: var(--transitionTime);
 }
 .personCard__close:hover {
