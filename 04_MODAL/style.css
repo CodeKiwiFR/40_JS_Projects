@@ -28,7 +28,8 @@
     --clr-black: #222;
     --ff-primary: 'Roboto', sans-serif;
     --ff-secondary: 'Open Sans', sans-serif;
-    --letterSpacing: 0.25rem;
+    --wideLetterSpacing: 0.25rem;
+    --shortLetterSpacing: 0.125rem;
     --radius: 0.5rem;
     --transitionTime: 0.3s linear;
     --btnShadow: 0 0.0625rem 0.1875rem rgb(0 0 0 / 20%);
@@ -137,10 +138,32 @@ ul {
 .personCard__details__name {
     font-family: var(--ff-primary);
     font-weight: lighter;
-    letter-spacing: var(--letterSpacing);
+    letter-spacing: var(--wideLetterSpacing);
     font-size: 1.75rem;
     color: var(--clr-primary-2);
     margin: 1rem 0;
+}
+.personCard__details__email,
+.personCard__details__job,
+.personCard__details__phoneNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personCard__details__picto {
+    margin-right: 1rem;
+    font-size: 1.25rem;;
+    color: var(--clr-primary-5);
+}
+.personCard__details__picto:not(:last-child) {
+    margin-right: 1rem;
+}
+.personCard__details__email__text,
+.personCard__details__job__text,
+.personCard__details__phoneNumber__text {
+    font-family: var(--ff-primary);
+    font-size: 0.875rem;
+    letter-spacing: var(--shortLetterSpacing);
 }
 
 /* PersonCard loader and close cross */
@@ -194,14 +217,14 @@ ul {
     margin: 2rem 0;
     font-family: var(--ff-primary);
     font-size: 2.5rem;
-    letter-spacing: var(--letterSpacing);
+    letter-spacing: var(--wideLetterSpacing);
     text-shadow: var(--txt-shadow);
 }
 .mainContent__controlSection__button {
     font-family: var(--ff-primary);
     font-size: 0.875rem;
     font-weight: bold;
-    letter-spacing: var(--letterSpacing);
+    letter-spacing: var(--wideLetterSpacing);
     text-transform: uppercase;
     color: var(--clr-white);
     background-color: var(--clr-primary-5);
