@@ -38,9 +38,14 @@ const randomButtonHandler = (event) => {
             personJobElement.textContent = response.employment.title;
             personPhoneElement.textContent = response.phone_number;
             
-            for (const element of [personCardDetailsElement, personCardLoaderElement]) {
-                element.classList.add('loadedUser');
-            }
+            let loadedImageInterval = setInterval(() => {
+                if (personAvatarElement.complete) {
+                    for (const element of [personCardDetailsElement, personCardLoaderElement]) {
+                        element.classList.add('loadedUser');
+                    }
+                    clearInterval(loadedImageInterval);
+                }
+            }, 100);
         })
         .catch((error) => console.log('Error: ' + error));
 };
