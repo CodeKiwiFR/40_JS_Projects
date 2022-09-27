@@ -18,6 +18,7 @@
     --clr-grey-6: hsl(209, 23%, 60%);
     --clr-grey-7: hsl(211, 27%, 70%);
     --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-8-transparent: rgba(188, 204, 220, 0.6);
     --clr-grey-9: hsl(212, 33%, 89%);
     --clr-grey-10: hsl(210, 36%, 96%);
     --clr-white: #fff;
@@ -84,6 +85,8 @@ body {
     margin: 0;
 }
 body {
+    position: relative;
+    background-color: var(--clr-black);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     display: flex;
@@ -103,6 +106,27 @@ ul {
     align-items: center;
 }
 .gameBoard__canvas {
-    background-color: #EEE;
+    background-color: var(--clr-grey-10);
     display: block;
+}
+.gameOverContainer {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--clr-grey-8-transparent);
+    opacity: 0;
+    transition: 0;
+}
+
+.gameOverContainer.lost {
+    visibility: visible;
+    transition: 0.1s;
+    opacity: 1;
 }
